@@ -224,6 +224,7 @@ ul {
 .filter-box {
   display: flex;
   gap: 46px;
+  align-items: center;
 }
 .section {
   display: flex;
@@ -447,6 +448,21 @@ ul {
 .mainpage-titles-image-box-single {
   position: relative;
   height: 293px;
+}
+.active-web {
+  position: relative;
+  display: flex;
+  margin: 32px 0px;
+}
+.active-web::after {
+  content: "";
+  position: absolute;
+  border-radius: 2px;
+  border: solid;
+  background-color: var(--color-special-primary);
+  width: 100%;
+  bottom: -33px;
+  pointer-events: none;
 }
 
 .t1 {
