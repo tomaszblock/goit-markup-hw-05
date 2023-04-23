@@ -67,13 +67,19 @@ ul {
   transition-property: color, fill, background-color, box-shadow;
   transition-duration: 250ms;
 }
-.active-web,
 .header:hover,
 .header:focus,
 .footer-contact:hover,
 .footer-contact:focus,
 .header-icons:hover,
 .header-icons:focus {
+  color: var(--color-special-primary);
+  fill: var(--color-special-primary);
+}
+.active-web {
+  position: relative;
+  display: flex;
+  margin: 32px 0px;
   color: var(--color-special-primary);
   fill: var(--color-special-primary);
 }
@@ -449,11 +455,6 @@ ul {
   position: relative;
   height: 293px;
 }
-.active-web {
-  position: relative;
-  display: flex;
-  margin: 32px 0px;
-}
 .active-web::after {
   content: "";
   position: absolute;
@@ -465,21 +466,32 @@ ul {
   pointer-events: none;
 }
 
-.t1 {
-  width: 200px;
-  height: 150px;
-  border-radius: 10px;
-  background-color: green;
+.portfolio-overlay {
+  position: absolute;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+.portfolio-overlay-box {
+  position: relative;
+  overflow: hidden;
+}
+.active:hover .portfolio-overlay-box .portfolio-overlay {
+  transform: translateY(0);
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform;
   opacity: 1;
 }
-.t1:hover {
-  background-color: yellow;
-  opacity: 0;
-  transition-duration: 10s;
-}
-.t2 {
-  display: flex;
-  justify-content: center;
-  gap: 250px;
-  margin-top: 250px;
+.portfolio-overlay p {
+  margin: 49px 45px 49px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--color-white);
 }
