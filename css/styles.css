@@ -1,6 +1,7 @@
 :root {
   --color-font-primary: rgb(33, 33, 33);
   --color-special-primary: rgb(33, 150, 243);
+  --color-special-primary-opacity: rgba(33, 150, 243, 0.9);
   --color-special-secondary: rgb(89, 0, 255);
   --color-white: rgb(255, 255, 255);
   --color-white-alpha: rgba(255, 255, 255, 0.6);
@@ -468,7 +469,7 @@ ul {
 
 .portfolio-overlay {
   position: absolute;
-  background-color: rgba(33, 150, 243, 0.9);
+  background-color: var(--color-special-primary-opacity);
   opacity: 0.5;
   height: 100%;
   width: 100%;
@@ -482,7 +483,7 @@ ul {
 }
 .active:hover .portfolio-overlay-box .portfolio-overlay {
   transform: translateY(0);
-  transition-duration: 2s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: transform;
   opacity: 1;
