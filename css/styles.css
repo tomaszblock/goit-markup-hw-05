@@ -320,9 +320,6 @@ ul {
 }
 .header-icons {
   margin-right: 10px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, fill;
-  transition-duration: 250ms;
 }
 .list-icon-box {
   display: flex;
