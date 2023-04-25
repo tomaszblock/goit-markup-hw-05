@@ -55,18 +55,14 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, fill;
+  transition-duration: 250ms;
 }
 .header-contact {
   display: flex;
   align-items: center;
   color: var(--color-font-secondary);
-}
-
-:hover,
-:focus {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, fill, background-color, box-shadow;
-  transition-duration: 250ms;
 }
 .header:hover,
 .header:focus,
@@ -124,6 +120,9 @@ ul {
   background-color: var(--color-special-primary);
   padding: 10px 41px 10px 42px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, box-shadow;
+  transition-duration: 250ms;
 }
 .list-title {
   font-weight: 700;
@@ -162,6 +161,9 @@ ul {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--color-white);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, fill;
+  transition-duration: 250ms;
 }
 .footer-contact-alpha {
   color: var(--color-white-alpha);
@@ -178,6 +180,9 @@ ul {
   background-color: var(--color-buttons);
   padding: 6px 22px;
   margin-right: 8px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, box-shadow;
 }
 .button-filters-active {
   color: var(--color-white);
@@ -315,6 +320,9 @@ ul {
 }
 .header-icons {
   margin-right: 10px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, fill;
+  transition-duration: 250ms;
 }
 .list-icon-box {
   display: flex;
@@ -340,6 +348,10 @@ ul {
   padding: 12px 12px;
   fill: var(--color-icons-primary);
   max-height: 44px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, fill;
+  border-radius: 50%;
+  transition-duration: 250ms;
 }
 .mainpage-image-media-icon:hover,
 .mainpage-image-media-icon:focus,
@@ -362,12 +374,14 @@ ul {
   cursor: pointer;
   border: 1px solid var(--color-special-primary);
 }
+.mainpage-ourcustomers-box svg {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill, border;
+  transition-duration: 250ms;
+}
 .mainpage-ourcustomers-box:focus svg,
 .mainpage-ourcustomers-box:hover svg {
   fill: var(--color-special-primary);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, fill, background-color, box-shadow;
-  transition-duration: 250ms;
 }
 .footer-inbox {
   display: flex;
@@ -394,6 +408,9 @@ ul {
   fill: var(--color-white);
   max-height: 44px;
   background-color: var(--color-bg-footer-icons);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
 }
 .footer-joinus-box {
   display: flex;
@@ -401,12 +418,14 @@ ul {
   flex-direction: column;
   gap: 20px;
 }
-.portfolio-box > li:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.portfolio-box > li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color, fill, background-color, box-shadow;
   transition-duration: 250ms;
+}
+.portfolio-box > li:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .is-hidden {
   pointer-events: none;
@@ -481,6 +500,9 @@ ul {
   width: 100%;
   transform: translateY(100%);
   opacity: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform, opacity;
 }
 .portfolio-overlay-box {
   position: relative;
@@ -488,9 +510,6 @@ ul {
 }
 .active:hover .portfolio-overlay-box .portfolio-overlay {
   transform: translateY(0);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: transform, opacity, background-color, visibility;
   opacity: 1;
 }
 .portfolio-overlay p {
